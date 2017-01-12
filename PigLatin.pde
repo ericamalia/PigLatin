@@ -44,15 +44,18 @@ public String pigLatin(String sWord)
 			return sWord.substring(2,sWord.length()) + "quay";
 		}
 
-
+		int count = 0; 
+		String next = new String(); 
 		for (int i =0; i< sWord.length(); i++){
+			
 			String firstCon = sWord.substring(i, i+1);
 			if (!firstCon.equals("a") || !firstCon.equals("e") || !firstCon.equals("i") || !firstCon.equals("o") || !firstCon.equals("u")){
-			 	String con = firstCon + firstCon; 
+			 	//next = next + firstCon; 
+			 	count++;
 			
-		}return sWord.substring(1, sWord.length()) + con + "ay"; 
 		}
+		}
+		return sWord.substring(count, sWord.length())  + "ay";
 		
-		return "ERROR!";
 	}
 }
